@@ -1,3 +1,6 @@
+import Reviews from "@/app/components/detailComponents/Reviews";
+import Showcase from "@/app/components/detailComponents/Showcase";
+import Basket from "@/app/components/utilityComponents/Basket";
 import Image from "next/image";
 import { Suspense } from "react";
 
@@ -9,7 +12,13 @@ export default async function detail({ params }) {
 
   return (
     <Suspense fallback={<div>Loading products...</div>}>
-      <div className="bg-gray-600 grid grid-cols-[1fr_375px_1fr]"></div>
+      <div className="">
+        <div className="grid grid-cols-[4fr_2fr] gap-8">
+          <Showcase product={product}></Showcase>
+          <Basket></Basket>
+        </div>
+        <Reviews product={product}></Reviews>
+      </div>
     </Suspense>
   );
 }
