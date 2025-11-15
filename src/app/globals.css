@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --prime: #252525;
+  --primary: #252525;
   --secondary: #ffffff;
 }
 
@@ -12,12 +12,13 @@
 }
 
 body {
-  background: var(--prime);
+  background: var(--primary);
   color: var(--secondary);
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
   grid-template-columns: 1fr [content] 1200px 1fr;
   > * {
     grid-column: content;
+    padding-inline: 2rem;
   }
 }
