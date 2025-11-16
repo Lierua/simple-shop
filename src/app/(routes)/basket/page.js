@@ -1,6 +1,10 @@
+import BasketDetails from "@/app/components/basketComponents/BasketDetails";
 import Image from "next/image";
-import Products from "@/app/components/productsComponents/Products";
 
 export default function basket() {
-  return <div></div>;
+  return (
+    <div>
+      <BasketDetails></BasketDetails>
+    </div>
+  );
 }
