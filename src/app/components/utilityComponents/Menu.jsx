@@ -18,7 +18,7 @@ const Menu = () => {
           </Link>
         </li>
         <li>
-          <Link href="/" className="flex gap-2">
+          <Link href="/basket" className="flex gap-2">
             <p>Basket</p> <SlBasket className="scale-[1.3]" />
           </Link>
         </li>

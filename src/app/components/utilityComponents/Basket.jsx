@@ -2,6 +2,7 @@
 
 import useBasketStore from "@/app/store/AddItem";
 import { RxCross1 } from "react-icons/rx";
+import Link from "next/link";
 
 const Basket = () => {
   const basketItems = useBasketStore((state) => state.basketItems);
@@ -25,6 +26,15 @@ const Basket = () => {
         <p className="py-3 mt-auto">Total Price: </p>
         <p className="ml-auto">{totalPrice.toFixed(2)} £</p>
       </div>
+      <Link href={"/basket"}>
+        <button
+          onClick={() => addItem(product)}
+          className={`hover:bg-(--secondary) hover:text-(--primary)
+            transition-all duration-200 ease mt-auto mb-4 mr-auto px-[25px] py-[8px] border-white border-[2px] rounded-[5px]`}
+        >
+          Check out
+        </button>
+      </Link>
     </div>
   );
 };
