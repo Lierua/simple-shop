@@ -32,7 +32,7 @@ const FetchProduct = async ({ Category }) => {
     grid-rows-[200px_auto_auto]
     grid-cols-[0.1fr_1fr_0.1fr]
     [&>*]:col-start-2
-    w-[300px]
+    w-[minmax(0,300px)]
     min-w-0
     bg-white 
     text-black 
@@ -56,13 +56,9 @@ const FetchProduct = async ({ Category }) => {
           <h3 className="justify-self-end-safe text-base">{product.price} kr.</h3>
         </div>
 
-        <CartButton className="self-end"/>
+        <CartButton className="self-end" />
       </div>
-
-      
     </Link>
-
-    
   ));
 };
 export default Products;
