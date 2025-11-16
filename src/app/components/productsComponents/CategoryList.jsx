@@ -1,8 +1,7 @@
-
 "use client";
 import { useRouter } from "next/navigation";
 
-function CategoryList({ categories = [] }) {
+function CategoryList({ categories }) {
   const router = useRouter();
 
   const handleChange = (e) => {
@@ -16,7 +15,7 @@ function CategoryList({ categories = [] }) {
 
   return (
     <select id="categories" name="categories" onChange={handleChange}>
-      <option className="text-black">Alle Produkter</option>
+      <option className="text-black">All</option>
       {categories.map((category) => (
         <option key={category} value={category} className="text-black">
           {category}
