@@ -1,3 +1,5 @@
+"use client";
+
 import useBasketStore from "@/app/store/AddItem";
 
 const BasketButton = ({ product }) => {

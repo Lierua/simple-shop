@@ -6,7 +6,7 @@ import Basket from "@/app/components/utilityComponents/Basket";
 
 export default function productlist({ searchParams }) {
   return (
-    <div className="grid grid-cols-[minmax(0,auto)_auto] gap-8 grid-rows-[minmax(0,50px)_auto]">
+    <div className="grid grid-cols-[minmax(0,auto)_auto] gap-8 grid-rows-[minmax(0,50px)_auto] h-fit">
       <div className="grid-rows-subgrid row-start-1 row-span-2  ">
         <div className="row-start-1 col-span-full my-4">
           <Categories />
@@ -17,7 +17,7 @@ export default function productlist({ searchParams }) {
           </div>
         </Suspense>
       </div>
-      <div className="mt-12">
+      <div className="mt-12 h-full row-span-2">
         <Basket />
       </div>
     </div>

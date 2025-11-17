@@ -10,11 +10,18 @@ const Basket = () => {
   const totalPrice = basketItems.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col sticky top-4 min-w-[320px]">
       {basketItems.length === 0 && <p>No items yet</p>}
       {basketItems.map((item) => (
-        <div className="flex items-center border-b-white/20 border-b-[2px] mb-2">
-          <div key={item.id}>{item.title}</div>
+        <div
+          key={item.id}
+          className="flex items-center border-b-white/20 border-b-[2px] mb-2 "
+        >
+          <div className="mr-6">
+            {item.title.length > 20
+              ? item.title.slice(0, 20) + "..."
+              : item.title}
+          </div>
           <p className="ml-auto mr-4">{item.price} £</p>
           <RxCross1
             onClick={() => removeItem(item.id)}
