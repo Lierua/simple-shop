@@ -17,7 +17,7 @@ const FetchProduct = async ({ Category }) => {
 
   let url = "https://dummyjson.com/products";
 
-  if (Category && Category !== "Alle") {
+  if (Category && Category !== "All") {
     url = `https://dummyjson.com/products/category/${Category}`;
   }
 
@@ -42,7 +42,14 @@ const FetchProduct = async ({ Category }) => {
     pb-3
     overflow-hidden"
       >
-        <Image className="col-start-1! col-span-full h-full w-full object-contain bg-[#f2968f]/50" loading="eager" src={product.thumbnail} width={300} height={200} alt={product.title} />
+        <Image
+          className="col-start-1! col-span-full h-full w-full object-contain bg-[#f2968f]/50"
+          loading="eager"
+          src={product.thumbnail}
+          width={300}
+          height={200}
+          alt={product.title}
+        />
 
         <div className="grid grid-cols-[1fr_auto] gap-4 py-6 min-w-0">
           <div className="min-w-0">
@@ -53,7 +60,9 @@ const FetchProduct = async ({ Category }) => {
               <p className="text-gray-400">{product.rating}</p>
             </span>
           </div>
-          <h3 className="justify-self-end-safe text-base">{product.price} kr.</h3>
+          <h3 className="justify-self-end-safe text-base">
+            {product.price} kr.
+          </h3>
         </div>
 
         <CartButton className="self-end" />
