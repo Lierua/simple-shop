@@ -12,12 +12,12 @@ export default function productlist({ searchParams }) {
           <Categories />
         </div>
         <Suspense>
-          <div className="grid grid-cols-[1fr_1fr_1fr] w-full gap-4">
+          <div className="grid grid-cols-[1fr_1fr_1fr] grid-rows-[auto_auto_auto] w-full gap-4">
             <ProductListContainer searchParams={searchParams} />
           </div>
         </Suspense>
       </div>
-      <div className="mt-12 h-full row-span-2">
+      <div className="mt-12 h-full">
         <Basket />
       </div>
     </div>

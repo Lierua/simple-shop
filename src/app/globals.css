@@ -9,6 +9,11 @@
 }
 
 @theme inline {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-secLight: var(--secondaryLight);
+  --color-blue: var(--blue);
+  --color-blueLight: var(--blueLight);
 }
 
 @media (prefers-color-scheme: dark) {
