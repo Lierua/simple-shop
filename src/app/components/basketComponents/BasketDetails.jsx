@@ -41,7 +41,6 @@ const BasketDetails = () => {
         <p className="ml-auto">DKK {totalPrice.toFixed(2)}</p>
       </div>
       <button
-        onClick={() => addItem(product)}
         className={`hover:bg-(--secondary) hover:text-(--primary)
             transition-all duration-200 ease mt-8 mb-4 mr-auto px-[25px] py-[8px] border-white border-[2px] rounded-[5px]`}
       >
