@@ -38,7 +38,7 @@ const BasketDetails = () => {
       </div>
       <div className="flex items-center text-2xl w-[400px]">
         <p className="py-3 mt-auto">Total Price: </p>
-        <p className="ml-auto">{totalPrice.toFixed(2)} £</p>
+        <p className="ml-auto">DKK {totalPrice.toFixed(2)}</p>
       </div>
       <button
         onClick={() => addItem(product)}

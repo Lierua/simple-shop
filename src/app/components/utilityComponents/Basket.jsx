@@ -13,8 +13,8 @@ const Basket = () => {
     <div className="flex flex-col sticky top-4 min-w-[320px] bg-(--secondary) text-(--primary) py-4 px-6">
       {basketItems.length === 0 && <p>No items yet</p>}
       {basketItems.map((item) => (
-        <div className="flex flex-col">
-          <div key={item.id} className="flex items-center mb-2 ">
+        <div className="flex flex-col " key={item.id}>
+          <div className="flex items-center mb-2 ">
             <div className="mr-6">
               {item.title.length > 20
                 ? item.title.slice(0, 20) + "..."
@@ -35,7 +35,6 @@ const Basket = () => {
       </div>
       <Link href={"/basket"}>
         <button
-          onClick={() => addItem(product)}
           className={`hover:bg-(--primary) hover:text-(--secondary)
             transition-all duration-200 ease mt-auto mb-4 text-[12px] mr-auto px-[20px] py-[6px]  border-[2px]`}
         >
