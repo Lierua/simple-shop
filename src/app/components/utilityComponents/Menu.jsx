@@ -7,19 +7,20 @@ const Menu = () => {
   return (
     <div className="flex gap-[4rem] py-6">
       <Link href="/">
-        <h1 className="flex gap-2">
-          Simple Shop <IoHomeOutline className="scale-[1.3]" />
-        </h1>
+        <p className="flex gap-2 text-(--blue) font-bold">
+          Simple Shop <IoHomeOutline className="scale-[1.3] mt-[2px]" />
+        </p>
       </Link>
       <ul className="flex gap-8 [&>p]:mr-4 [&>p]:font-semibold ">
         <li>
           <Link href="/products" className="flex gap-2">
-            <p>Products</p> <AiOutlineShopping className="scale-[1.3]" />
+            <p>Products</p>{" "}
+            <AiOutlineShopping className="scale-[1.3] mt-[2px]" />
           </Link>
         </li>
         <li>
           <Link href="/basket" className="flex gap-2">
-            <p>Basket</p> <SlBasket className="scale-[1.3]" />
+            <p>Basket</p> <SlBasket className="scale-[1.3] mt-[2px]" />
           </Link>
         </li>
       </ul>
