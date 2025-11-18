@@ -12,13 +12,13 @@ export default async function detail({ params }) {
 
   return (
     <Suspense fallback={<div>Loading products...</div>}>
-      <div className="">
+      <div className="mt-8">
         <div className="grid grid-cols-[4fr_2fr] gap-8">
           <Showcase product={product}></Showcase>
           <Basket></Basket>
         </div>
-        <Reviews product={product}></Reviews>
       </div>
+      <Reviews product={product}></Reviews>
     </Suspense>
   );
 }
