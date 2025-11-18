@@ -36,9 +36,9 @@ const Showcase = ({ product }) => {
           <BasketButton product={product}></BasketButton>
           <div className=" flex justify-between">
             <p className="text-4xl "> DKK {product.price} </p>
-            <h1 className="text-4xl flex gap-1 self-end ml-auto">
+            <p className="text-4xl flex gap-1 self-end ml-auto">
               {product.rating} <TiStarFullOutline className="scale-[0.8]" />
-            </h1>
+            </p>
           </div>
         </div>
       </div>

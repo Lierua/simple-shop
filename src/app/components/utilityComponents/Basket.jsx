@@ -10,7 +10,7 @@ const Basket = () => {
   const totalPrice = basketItems.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="flex flex-col sticky top-4 min-w-[320px] bg-(--secondary) text-(--primary) py-4 px-6">
+    <div className="flex flex-col sticky top-4 min-w-[320px] bg-(--secondary) text-(--primary) py-4 px-6 shadow">
       {basketItems.length === 0 && <p>No items yet</p>}
       {basketItems.map((item) => (
         <div className="flex flex-col " key={item.id}>
