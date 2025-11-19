@@ -36,11 +36,11 @@ const FetchProduct = async ({ Category }) => {
           
           <div className="grid grid-cols-1 [&>*]:col-start-1 [&>*]:row-start-1 col-start-1! col-span-full overflow-hidden">
             <h1 className="text-primary p-4 text-2xl font-bold absolute uppercase z-10">{product.category}</h1>
-            <Image className="group-hover:scale-110 transition-all ease-in-out duration-300 h-full w-full object-contain bg-blue" loading="eager" src={product.thumbnail} width={300} height={200} alt={product.title} />
+            <Image className="group-hover:scale-110 transition-all ease-in-out duration-300 h-full w-full object-contain bg-(--blue)/60" loading="eager" src={product.thumbnail} width={300} height={200} alt={product.title} />
           </div>
           <div className="grid grid-cols-[1fr_auto] gap-4 py-4 min-w-0">
             <div className="min-w-0">
-              <h1 className=" text-lg truncate font-semibold">{product.title}</h1>
+              <h2 className=" text-lg truncate font-semibold">{product.title}</h2>
 
               <span className="flex flex-nowrap gap-1 border-b-1 border-gray-400  mt-2">
                 <p className="text-gray-400 text-xs">{product.brand}</p>

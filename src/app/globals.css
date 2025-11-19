@@ -20,7 +20,7 @@
 }
 
 body {
-  background: var(--primary);
+  background: var(--secondary);
   background-image: url("../../public/skulls.png");
   color: var(--secondary);
   font-family: Arial, Helvetica, sans-serif;
