@@ -30,10 +30,9 @@ const FetchProduct = async ({ Category }) => {
     <div className="relative z-10 group h-[420px] w-[235px] overflow-hidden rounded-sm" key={product.id}>
       <Link href={`/detail/${product.id}`} className="relative z-10 ">
         <div
-          className=" grid grid-cols-[0.1fr_1fr_0.1fr] [&>*]:col-start-2 w-[minmax(0,300px)] min-w-0 bg-white 
+          className=" grid grid-cols-[0.1fr_1fr_0.1fr] [&>*]:col-start-2 w-[minmax(0,300px)] min-w-0 bg-white  
           text-secondary shadow-xl  pb-3 overflow-hidden h-[420px]"
         >
-          
           <div className="grid grid-cols-1 [&>*]:col-start-1 [&>*]:row-start-1 col-start-1! col-span-full overflow-hidden">
             <h1 className="text-primary p-4 text-2xl font-bold absolute uppercase z-10">{product.category}</h1>
             <Image className="group-hover:scale-110 transition-all ease-in-out duration-300 h-full w-full object-contain bg-(--blue)/60" loading="eager" src={product.thumbnail} width={300} height={200} alt={product.title} />
