@@ -10,7 +10,7 @@ const Showcase = ({ product }) => {
   const [imageSelection, SetImageSelection] = useState(product.images[0]);
   return (
     <div className="">
-      <div className="grid grid-cols-[2fr_3fr] gap-6 pr-[4rem] border-r-white/20 border-r-[2px]">
+      <div className="grid grid-cols-[2fr_3fr] gap-6 pr-[4rem]">
         <div className="relative">
           <Image
             loading="eager"
@@ -20,7 +20,7 @@ const Showcase = ({ product }) => {
             className="aspect-square w-[310px] object-cover bg-(--blue) p-2 shadow"
             alt={product.title}
           />
-          <h1 className="uppercase absolute top-4 left-4 text-3xl">
+          <h1 className="uppercase absolute top-4 left-4 text-3xl text-(--primary) italic">
             {product.category}
           </h1>
           <ImageSelection
@@ -30,7 +30,7 @@ const Showcase = ({ product }) => {
           ></ImageSelection>
         </div>
         <div className="flex flex-col">
-          <h1 className="text-3xl mb-4"> {product.title} </h1>
+          <p className="text-3xl mb-4"> {product.title} </p>
           <p className="text-[14px]"> {product.description} </p>
           <div className="w-[200px] h-[2px] bg-(--secondary) mt-4"></div>
           <BasketButton product={product}></BasketButton>

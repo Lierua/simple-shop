@@ -11,7 +11,7 @@ const BasketDetails = () => {
   const totalPrice = basketItems.reduce((sum, item) => sum + item.price, 0);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mt-8 bg-white shadow p-8 w-fit h-fit">
       <div className="flex flex-col gap-2">
         {basketItems.length === 0 && <p>No items yet.</p>}
         {basketItems.map((item) => (
@@ -51,7 +51,7 @@ const BasketDetails = () => {
       </div>
       <button
         className={`hover:bg-(--blueLight) hover:border-(--blueLight)
-            transition-all duration-200 ease mt-3 mb-[20rem] mr-auto px-[25px] py-[8px] border-(--blue) bg-(--blue) text-(--primary) border-[2px]`}
+            transition-all duration-200 ease mt-3 mr-auto px-[25px] py-[8px] border-(--blue) bg-(--blue) text-(--primary) border-[2px]`}
       >
         Buy Now
       </button>

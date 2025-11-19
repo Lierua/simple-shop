@@ -6,6 +6,7 @@
   --secondaryLight: #1b1b1b5b;
   --blue: #25aaff;
   --blueLight: #57cfff;
+  --content-width: 1200px;
 }
 
 @theme inline {
@@ -20,8 +21,8 @@
 }
 
 body {
-  background: var(--secondary);
-  background-image: url("../../public/skulls.png");
+  background: rgb(255, 255, 255);
+  background-image: url("../../public/diagonal-striped-brick.png");
   color: var(--secondary);
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
@@ -42,4 +43,21 @@ body {
 .full-bleed {
   grid-column: 1/-1;
   padding-inline: max(1rem, 50% - var(--content-width) / 2);
+}
+
+.black-gradient-80 {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.85) 0%,
+    transparent 100%
+  );
+}
+
+ul {
+  li {
+    color: var(--secondary);
+    &:hover {
+      scale: 1.1;
+    }
+  }
 }

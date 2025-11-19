@@ -15,9 +15,13 @@ function CategoryList({ categories }) {
 
   return (
     <select id="categories" name="categories" onChange={handleChange}>
-      <option className="text-black">All</option>
+      <option className="text-black capitalize">All</option>
       {categories.map((category) => (
-        <option key={category} value={category} className="text-black">
+        <option
+          key={category}
+          value={category}
+          className="text-black capitalize"
+        >
           {category}
         </option>
       ))}
