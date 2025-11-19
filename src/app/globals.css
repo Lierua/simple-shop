@@ -21,6 +21,7 @@
 
 body {
   background: var(--primary);
+  background-image: url("../../public/skulls.png");
   color: var(--secondary);
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
