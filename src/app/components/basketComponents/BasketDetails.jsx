@@ -13,7 +13,7 @@ const BasketDetails = () => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-col gap-2">
-        {basketItems.length === 0 && <p>No items yet</p>}
+        {basketItems.length === 0 && <p>No items yet.</p>}
         {basketItems.map((item) => (
           <div key={item.title} className="flex gap-4">
             <Link href={`/detail/${item.id}`} className="relative z-10 ">
